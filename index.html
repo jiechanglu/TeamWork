@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div>博学谷</div>
+</body>
+<script src="./js/jquery.js"></script>
+<script>
+$(function(){
+    $.ajax({
+        url:'/v6/login',
+        type:'post',
+        data:{
+            tc_name: '前端学院',
+            tc_pass: 123456
+        },
+        success:function(data){
+            console.log(data);
+        }
+    });
+    $.ajax({
+        url:'/v6/course',
+        success:function(data){
+            console.log(data);
+        }
+    });
+});
+</script>
+</html>
